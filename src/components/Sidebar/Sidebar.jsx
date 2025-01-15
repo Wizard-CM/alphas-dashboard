@@ -8,8 +8,8 @@ import Link from "next/link";
 
 const Sidebar = ({ className, navigationItems }) => {
   const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: Window.innerWidth,
+    height: Window.innerHeight,
   });
 
   const { isSidebarOpen, setSidebarOpen } = useGlobalContext();
@@ -17,14 +17,14 @@ const Sidebar = ({ className, navigationItems }) => {
   useEffect(() => {
     const handleResize = () => {
       setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: Window.innerWidth,
+        height: Window.innerHeight,
       });
     };
 
-    window.addEventListener("resize", handleResize);
+    Window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      Window.removeEventListener("resize", handleResize);
     };
   }, []);
 
