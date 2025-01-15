@@ -7,26 +7,10 @@ import { usePathname } from 'next/navigation'
 import Link from "next/link";
 
 const Sidebar = ({ className, navigationItems }) => {
-  const [windowSize, setWindowSize] = useState({
-    width: Window.innerWidth,
-    height: Window.innerHeight,
-  });
+
 
   const { isSidebarOpen, setSidebarOpen } = useGlobalContext();
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: Window.innerWidth,
-        height: Window.innerHeight,
-      });
-    };
-
-    Window.addEventListener("resize", handleResize);
-    return () => {
-      Window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <div
@@ -54,7 +38,6 @@ const SidebarLogo_List = ({ className, navigationItems }) => {
   // if clicked item && the items that is being mapped matches , then only display the dropdown
 
   const pathname = usePathname()
-  console.log(pathname);
 
   return (
     <div className={`${className} w-full flex flex-col gap-5`}>
