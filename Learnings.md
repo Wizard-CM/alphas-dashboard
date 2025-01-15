@@ -1,0 +1,4 @@
+- charts are fully responsive unitl the smallest screen size
+- flex-wrap won't work incase of grid
+- sidebar hataune wala logic
+- 

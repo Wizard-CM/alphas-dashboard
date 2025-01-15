@@ -10,6 +10,14 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+
+        primary_text_color:"var(--primary-text-color)",
+        secondary_text_color:"var(--secondary-text-color)",
+
+        body_bg:"var(--body-bg-color)",
+        component_bg:"var(--component-bg-color)",
+
+        theme_color:"var(--theme-color)"
       },
     },
   },
